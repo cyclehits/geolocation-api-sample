@@ -1,5 +1,4 @@
 export default {
-  target: 'static',
   head: {
     title: 'Geolocation API Sample',
     meta: [
