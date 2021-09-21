@@ -79,8 +79,8 @@ export default class IndexView extends Vue {
 
   // Initial value is latitude & longitude of Tokyo Sky Tree
   basePosition: Position = {
-    latitude: 35.710139,
-    longitude: 139.810833
+    latitude: 35.7100627,
+    longitude: 139.8085117
   };
 
   get distance(): string {
