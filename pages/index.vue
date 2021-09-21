@@ -64,10 +64,6 @@ type Position = {
  */
 @Component
 export default class IndexView extends Vue {
-  readonly GEOLOCATION_OPTION = {
-    enableHighAccuracy: true
-  };
-
   readonly EARTH_RADIUS: number = 6371.071; // kilometer
 
   geolocationId: number | null = null;
@@ -113,11 +109,7 @@ export default class IndexView extends Vue {
   }
 
   mounted(): void {
-    this.geolocationId = navigator.geolocation.watchPosition(
-      this.updatePosition,
-      this.clearWatch,
-      this.GEOLOCATION_OPTION
-    );
+    this.geolocationId = navigator.geolocation.watchPosition(this.updatePosition, this.clearWatch);
   }
 
   private updatePosition(pos: any): void {
